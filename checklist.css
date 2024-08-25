@@ -1,0 +1,15 @@
+.slds-checkbox_faux {
+    border: 1px solid #d8dde6;
+    border-radius: 3px;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease-in-out;
+}
+.slds-checkbox_faux_checked {
+    border-color: #0070d2;
+}
+.strikethrough {
+    text-decoration: line-through;
+}
+.spacing-button {
+    margin-top: 100px; /* Adjust the value as needed */
+}

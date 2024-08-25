@@ -15,3 +15,8 @@ The html, css, js and apxc files are present under code.
 Step 3: Create a custom metadata which will contain all the label information by task. 
 ![image](https://github.com/user-attachments/assets/0f797b17-5584-47b7-8910-fa3a71a37170)
 ![image](https://github.com/user-attachments/assets/700a1bab-a384-4251-b201-3b1220a5cb3f)
+
+
+Step 4: Add a flow which will use this metadata to create the checklist records first time when the task is created. The xml file can be found in the code. 
+
+![image](https://github.com/user-attachments/assets/24b64cfe-18ac-49ba-973e-94ff455ff746)

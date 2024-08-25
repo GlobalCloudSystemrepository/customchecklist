@@ -1,0 +1,23 @@
+public with sharing class ChecklistController {
+    
+    @AuraEnabled(cacheable=true)
+    public static List<ChecklistItem__c> getChecklistItems(Id recordId) {
+        return [
+            SELECT Id, Label__c, Checked__c 
+            FROM ChecklistItem__c 
+            WHERE RecordId__c = :recordId
+        ];
+    }
+
+    @AuraEnabled
+    public static void saveChecklistItem(ChecklistItem__c checklistItem) {
+        // Ensure the fields match the correct API names
+        ChecklistItem__c item = new ChecklistItem__c();
+        item.Id = checklistItem.Id;
+        item.Checked__c = checklistItem.Checked__c; // Correct field name
+        item.RecordId__c = checklistItem.RecordId__c; // Correct field name
+        item.Label__c = checklistItem.Label__c; // Correct field name
+
+        upsert item;
+    }
+}

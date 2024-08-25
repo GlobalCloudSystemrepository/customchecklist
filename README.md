@@ -9,7 +9,7 @@ Step 1 : Add custom objectand fields.
 ![image](https://github.com/user-attachments/assets/6b8fe11a-b236-46b8-bd1a-f5ef04a01845)
 
 
-Step 2: Ass APEX class and LWC component. 
+Step 2: Add APEX class and LWC component. 
 The html, css, js and apxc files are present under code. 
 
 Step 3: Create a custom metadata which will contain all the label information by task. 

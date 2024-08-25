@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Checklist" >
+        <div class="slds-box slds-box_x-small">
+            <template for:each={checklistItems} for:item="item">
+                <div key={item.Id} class="slds-p-around_small">
+                    <lightning-input type="checkbox" 
+                                     label={item.Label__c} 
+                                     checked={item.Checked__c} 
+                                     onchange={handleCheckboxChange} 
+                                     data-id={item.Id}>
+                    </lightning-input>
+                </div>
+            </template>
+
+            
+            <lightning-button label="New" onclick={handleNewCheckbox}></lightning-button>
+        </div>
+
+        <div if:true={isAddingNew} class="slds-box slds-box_x-small">
+        <lightning-input label="Label" value={newLabel} onchange={handleLabelChange}></lightning-input>
+        <lightning-button label="Add" onclick={saveNewChecklistItem} style="margin-top: 10px;"></lightning-button>
+        </div>
+
+
+    </lightning-card>
+</template>
